@@ -19,19 +19,8 @@ class FirstController < UIViewController
 
     # Create images
 
-    tabNormal = UIImage.imageNamed('tabbar-activity-selected.png')
-    tabSelected = UIImage.imageNamed('tabbar-activity-selected.png')
-
     buttonNormal = UIImage.imageNamed('nav-button.png')
     buttonSelected = UIImage.imageNamed('nav-button-green.png')
-
-    # Style tabBar item
-
-    verticalOffset = UIOffset.new(0, -4)
-
-    self.tabBarItem = UITabBarItem.alloc.initWithTitle('First', image: nil, tag: 0)
-    self.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)
-    self.tabBarItem.setTitlePositionAdjustment(verticalOffset)
 
     # Create button 
 
