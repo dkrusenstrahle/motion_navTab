@@ -1,6 +1,10 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
 
+    # Set status bar color to black
+
+    application.setStatusBarStyle(UIStatusBarStyleBlackOpaque, animated:false)
+
     # Create the main window
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
@@ -19,7 +23,7 @@ class AppDelegate
     # Style the navBar
 
     backgroundImage = UIImage.imageNamed('navigationbar.png') 
-    
+
     first_nav.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
     second_nav.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
 
