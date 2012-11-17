@@ -1,7 +1,7 @@
 class FirstController < UIViewController
   def initWithNibName(name, bundle: bundle)
     super
-    customize
+    add_elements
     self
   end
 
@@ -9,15 +9,17 @@ class FirstController < UIViewController
     super
   end
 
-  def customize
+  def add_elements
 
-    # Set main view attributes
+    # Set views title in the navigationBar
 
     self.title = "First"
 
+    # Set the window background color
+
     view.backgroundColor = UIColor.whiteColor 
 
-    # Create images
+    # Create the state images for the button
 
     buttonNormal = UIImage.imageNamed('nav-button.png')
     buttonSelected = UIImage.imageNamed('nav-button-green.png')
@@ -38,12 +40,9 @@ class FirstController < UIViewController
 
   def push
 
-    # Create the controller
+    # Create the controller and push it onto the stack
 
     controller = SecondController.alloc.init
-
-    # Push the new controller onto the stack
-
     self.navigationController.pushViewController(controller, animated:true)
   end
 end

@@ -1,7 +1,7 @@
 class SecondController < UIViewController
   def initWithNibName(name, bundle: bundle)
     super
-    customize
+    add_elements
     self
   end
 
@@ -9,25 +9,27 @@ class SecondController < UIViewController
     super
   end
 
-  def customize
+  def add_elements
 
-    # Set the main view attributes
+    # Set views title in the navigationBar
 
     self.title = "Second"
-    
+
+    # Set the window background color
+
     view.backgroundColor = UIColor.whiteColor 
 
-    # Create the images
+    # Create the state images for the back button
 
-    backNormal = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
-    backSelected = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
+    backButtonNormal = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
+    backButtonSelected = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
 
-    # Style the back button
+    # Style and adjust the back button
 
-    offset = UIOffset.new(3, 0)
+    titleOffset = UIOffset.new(3, 0)
 
-    UIBarButtonItem.appearance.setBackButtonBackgroundImage(backNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
-    UIBarButtonItem.appearance.setBackButtonBackgroundImage(backSelected, forState: UIControlStateHighlighted, barMetrics: UIBarMetricsDefault)
-    UIBarButtonItem.appearance.setBackButtonTitlePositionAdjustment(offset, forBarMetrics:UIBarMetricsDefault)
+    UIBarButtonItem.appearance.setBackButtonBackgroundImage(backButtonNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
+    UIBarButtonItem.appearance.setBackButtonBackgroundImage(backButtonSelected, forState: UIControlStateHighlighted, barMetrics: UIBarMetricsDefault)
+    UIBarButtonItem.appearance.setBackButtonTitlePositionAdjustment(titleOffset, forBarMetrics:UIBarMetricsDefault)
   end
 end

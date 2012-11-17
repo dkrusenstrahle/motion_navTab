@@ -5,7 +5,7 @@ class AppDelegate
 
     application.setStatusBarStyle(UIStatusBarStyleBlackOpaque, animated:false)
 
-    # Create the main controllers and style the tabs
+    # Create the main view controllers and style the tabs
 
     labelOffset = UIOffset.new(0, -4)
 
@@ -22,7 +22,7 @@ class AppDelegate
     secondViewController.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)
     secondViewController.tabBarItem.setTitlePositionAdjustment(labelOffset)
 
-    # Create the navigation controllers and style them
+    # Create the navigation controllers and set a background image to them
 
     backgroundImage = UIImage.imageNamed('navigationbar.png') 
 
@@ -32,17 +32,17 @@ class AppDelegate
     secondNavController = UINavigationController.alloc.initWithRootViewController(secondViewController)
     secondNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
 
-    # Style the tabBar
+    # Style the tabBarController
 
     tabBarController = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
     tabBarController.tabBar.backgroundImage = UIImage.imageNamed('tabbar-background.png')
     tabBarController.tabBar.selectionIndicatorImage = UIImage.imageNamed('tabbar-background-pressed.png')
 
-    # Add the tabs
+    # Add the tabs to the tabBarController
 
     tabBarController.viewControllers = [firstNavController, secondNavController]
 
-    # Set root controller for the window
+    # Create and set root controller for the main window
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.makeKeyAndVisible
