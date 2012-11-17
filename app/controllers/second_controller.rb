@@ -14,6 +14,7 @@ class SecondController < UIViewController
     # Set the main view attributes
 
     self.title = "Second"
+    
     view.backgroundColor = UIColor.whiteColor 
 
     # Create the images
@@ -22,9 +23,9 @@ class SecondController < UIViewController
     tabSelected = UIImage.imageNamed('tabbar-activity-selected.png')
 
     backNormal = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
-    backPressed = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
+    backSelected = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
 
-    # Style the tabBar item
+    # Style the tabBar
 
     verticalOffset = UIOffset.new(0, -4)
 
@@ -37,7 +38,7 @@ class SecondController < UIViewController
     offset = UIOffset.new(3, 0)
 
     UIBarButtonItem.appearance.setBackButtonBackgroundImage(backNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
-    UIBarButtonItem.appearance.setBackButtonBackgroundImage(backPressed, forState: UIControlStateHighlighted, barMetrics: UIBarMetricsDefault)
+    UIBarButtonItem.appearance.setBackButtonBackgroundImage(backSelected, forState: UIControlStateHighlighted, barMetrics: UIBarMetricsDefault)
     UIBarButtonItem.appearance.setBackButtonTitlePositionAdjustment(offset, forBarMetrics:UIBarMetricsDefault)
   end
 end

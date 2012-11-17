@@ -12,20 +12,20 @@ class AppDelegate
 
     # Create the main controllers
 
-    first = FirstController.alloc.initWithNibName(nil, bundle: nil)
-    second = SecondController.alloc.initWithNibName(nil, bundle: nil)
+    firstViewController = FirstController.alloc.initWithNibName(nil, bundle: nil)
+    secondViewController = SecondController.alloc.initWithNibName(nil, bundle: nil)
 
-    # Create the main navigation controllers
+    # Create the navigation controllers
 
-    first_nav = UINavigationController.alloc.initWithRootViewController(first)
-    second_nav = UINavigationController.alloc.initWithRootViewController(second)
+    firstNavController = UINavigationController.alloc.initWithRootViewController(firstViewController)
+    secondNavController = UINavigationController.alloc.initWithRootViewController(secondViewController)
 
     # Style the navBar
 
     backgroundImage = UIImage.imageNamed('navigationbar.png') 
 
-    first_nav.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
-    second_nav.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
+    firstNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
+    secondNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
 
     # Style the tabBar
 
@@ -35,7 +35,7 @@ class AppDelegate
 
     # Add the tabs
 
-    tabBarController.viewControllers = [first_nav, second_nav]
+    tabBarController.viewControllers = [firstNavController, secondNavController]
 
     # Set root controller for the window
 

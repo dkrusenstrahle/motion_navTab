@@ -14,6 +14,7 @@ class FirstController < UIViewController
     # Set main view attributes
 
     self.title = "First"
+
     view.backgroundColor = UIColor.whiteColor 
 
     # Create images
@@ -22,7 +23,7 @@ class FirstController < UIViewController
     tabSelected = UIImage.imageNamed('tabbar-activity-selected.png')
 
     buttonNormal = UIImage.imageNamed('nav-button.png')
-    buttonPressed = UIImage.imageNamed('nav-button-green.png')
+    buttonSelected = UIImage.imageNamed('nav-button-green.png')
 
     # Style tabBar item
 
@@ -37,9 +38,9 @@ class FirstController < UIViewController
     button = UIBarButtonItem.alloc.init
     button.title = 'Add'
     button.action = 'push'
-    button.setBackgroundImage(buttonNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
-    button.setBackgroundImage(buttonPressed, forState:UIControlStateHighlighted, barMetrics:UIBarMetricsDefault)
     button.target = self
+    button.setBackgroundImage(buttonNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
+    button.setBackgroundImage(buttonSelected, forState:UIControlStateHighlighted, barMetrics:UIBarMetricsDefault)
 
     # Add button to navigation controller
 
