@@ -26,13 +26,16 @@ class SecondController < UIViewController
 
     # Style the tabBar item
 
+    verticalOffset = UIOffset.new(0, -4)
+
     self.tabBarItem = UITabBarItem.alloc.initWithTitle('Second', image: nil, tag: 0)
-    self.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal) 
+    self.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)
+    self.tabBarItem.setTitlePositionAdjustment(verticalOffset)
 
     # Style the back button
 
     offset = UIOffset.new(3, 0)
-    
+
     UIBarButtonItem.appearance.setBackButtonBackgroundImage(backNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
     UIBarButtonItem.appearance.setBackButtonBackgroundImage(backPressed, forState: UIControlStateHighlighted, barMetrics: UIBarMetricsDefault)
     UIBarButtonItem.appearance.setBackButtonTitlePositionAdjustment(offset, forBarMetrics:UIBarMetricsDefault)
