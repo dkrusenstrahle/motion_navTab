@@ -7,7 +7,7 @@ class AppDelegate
 
     # Create the main view controllers and style the tabs
 
-    labelOffset = UIOffset.new(0, -4)
+    titleOffset = UIOffset.new(0, -4)
 
     tabNormal = UIImage.imageNamed('tabbar-activity-selected.png')
     tabSelected = UIImage.imageNamed('tabbar-activity-selected.png')
@@ -15,12 +15,12 @@ class AppDelegate
     firstViewController = FirstController.alloc.initWithNibName(nil, bundle: nil)
     firstViewController.tabBarItem = UITabBarItem.alloc.initWithTitle('First', image: nil, tag: 0)
     firstViewController.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)
-    firstViewController.tabBarItem.setTitlePositionAdjustment(labelOffset)
+    firstViewController.tabBarItem.setTitlePositionAdjustment(titleOffset)
 
     secondViewController = SecondController.alloc.initWithNibName(nil, bundle: nil)
     secondViewController.tabBarItem = UITabBarItem.alloc.initWithTitle('Second', image: nil, tag: 0)
     secondViewController.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)
-    secondViewController.tabBarItem.setTitlePositionAdjustment(labelOffset)
+    secondViewController.tabBarItem.setTitlePositionAdjustment(titleOffset)
 
     # Create the navigation controllers and set a background image to them
 
