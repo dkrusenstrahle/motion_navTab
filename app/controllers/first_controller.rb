@@ -21,8 +21,8 @@ class FirstController < UIViewController
 
     # Create the state images for the button
 
-    buttonNormal = UIImage.imageNamed('nav-button.png')
-    buttonSelected = UIImage.imageNamed('nav-button-green.png')
+    buttonNormal = UIImage.imageNamed('navbar/button.png')
+    buttonSelected = UIImage.imageNamed('navbar/button.png')
 
     # Create button 
 
@@ -30,6 +30,7 @@ class FirstController < UIViewController
     button.title = 'Add'
     button.action = 'push'
     button.target = self
+    #button.setTitleTextAttributes('Futura-Medium', forState:UIControlStateNormal)
     button.setBackgroundImage(buttonNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
     button.setBackgroundImage(buttonSelected, forState:UIControlStateHighlighted, barMetrics:UIBarMetricsDefault)
 

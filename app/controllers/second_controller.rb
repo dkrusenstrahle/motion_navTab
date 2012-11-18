@@ -21,8 +21,8 @@ class SecondController < UIViewController
 
     # Create the state images for the back button
 
-    backButtonNormal = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
-    backButtonSelected = UIImage.imageNamed('nav-backbutton.png').stretchableImageWithLeftCapWidth(14, topCapHeight:0)
+    backButtonNormal = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(17, topCapHeight:0)
+    backButtonSelected = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(17, topCapHeight:0)
 
     # Style and adjust the back button
 

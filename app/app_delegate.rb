@@ -24,14 +24,21 @@ class AppDelegate
 
     # Create the navigation controllers and set a background image to them
 
-    backgroundImage = UIImage.imageNamed('navigationbar.png') 
+    backgroundImage = UIImage.imageNamed('navbar/background_navbar.png') 
 
     firstNavController = UINavigationController.alloc.initWithRootViewController(firstViewController)
     firstNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
+    firstNavController.navigationBar.setTitleTextAttributes({
+      UITextAttributeFont => UIFont.fontWithName('Futura-Medium', size:17),
+      UITextAttributeTextShadowColor => UIColor.colorWithWhite(0.0, alpha:0.4)
+    })
 
     secondNavController = UINavigationController.alloc.initWithRootViewController(secondViewController)
     secondNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
-
+    secondNavController.navigationBar.setTitleTextAttributes({
+      UITextAttributeFont => UIFont.fontWithName('Futura-Medium', size:17),
+      UITextAttributeTextShadowColor => UIColor.colorWithWhite(0.0, alpha:0.4)
+    })
     # Style the tabBarController
 
     tabBarController = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
