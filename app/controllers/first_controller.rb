@@ -18,6 +18,7 @@ class FirstController < UIViewController
     # Create the state images for the button and set the font
 
     defaultFont = UIFont.fontWithName('Futura-Medium', size:13)
+    
     buttonNormal = UIImage.imageNamed('navbar/button.png')
     buttonSelected = UIImage.imageNamed('navbar/button.png')
     backgroundBody = UIImage.imageNamed('body/background_body.png')
