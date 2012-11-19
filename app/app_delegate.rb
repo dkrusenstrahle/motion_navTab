@@ -9,8 +9,8 @@ class AppDelegate
 
     titleOffset = UIOffset.new(0, -4)
 
-    tabNormal = UIImage.imageNamed('tabbar-activity-selected.png')
-    tabSelected = UIImage.imageNamed('tabbar-activity-selected.png')
+    tabNormal = UIImage.imageNamed('body/icon_gear.png')
+    tabSelected = UIImage.imageNamed('body/icon_gear.png')
 
     firstViewController = FirstController.alloc.initWithNibName(nil, bundle: nil)
     firstViewController.tabBarItem = UITabBarItem.alloc.initWithTitle('First', image: nil, tag: 0)
@@ -42,7 +42,7 @@ class AppDelegate
     # Style the tabBarController
 
     tabBarController = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
-    tabBarController.tabBar.backgroundImage = UIImage.imageNamed('tabbar-background.png')
+    tabBarController.tabBar.backgroundImage = UIImage.imageNamed('tabbar/background_tabbar.png')
     tabBarController.tabBar.selectionIndicatorImage = UIImage.imageNamed('tabbar-background-pressed.png')
 
     # Add the tabs to the tabBarController
