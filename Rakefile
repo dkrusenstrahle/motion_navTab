@@ -3,7 +3,7 @@ $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project'
 
 Motion::Project::App.setup do |app|
-  app.name = 'navTab'
+  app.name = 'NavTab'
   app.icons = ["Icon.png", "Icon@2x.png"]
   app.fonts = ["MuseoSans-500.ttf"]
   app.provisioning_profile = '/Users/dkrusenstrahle/Desktop/DkrusenstrahleDistAH.mobileprovision'

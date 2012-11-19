@@ -1,7 +1,7 @@
 class FirstController < UIViewController
   def initWithNibName(name, bundle: bundle)
     super
-    add_elements
+    customize
     self
   end
 
@@ -9,20 +9,22 @@ class FirstController < UIViewController
     super
   end
 
-  def add_elements
+  def customize
 
     # Set views title in the navigationBar
 
     self.title = "First"
 
-    # Set the window background color
-
-    view.backgroundColor = UIColor.whiteColor 
-
     # Create the state images for the button
 
     buttonNormal = UIImage.imageNamed('navbar/button.png')
     buttonSelected = UIImage.imageNamed('navbar/button.png')
+    backgroundBody = UIImage.imageNamed('body/background_body.png')
+
+    # Set the window background color and pattern
+
+    view.backgroundColor = UIColor.whiteColor 
+    view.backgroundColor = UIColor.alloc.initWithPatternImage(backgroundBody)
 
     # Create button 
 

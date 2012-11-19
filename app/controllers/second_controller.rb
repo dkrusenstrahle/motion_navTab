@@ -1,7 +1,7 @@
 class SecondController < UIViewController
   def initWithNibName(name, bundle: bundle)
     super
-    add_elements
+    customize
     self
   end
 
@@ -9,20 +9,22 @@ class SecondController < UIViewController
     super
   end
 
-  def add_elements
+  def customize
 
     # Set views title in the navigationBar
 
     self.title = "Second"
 
+    # Create the state images for the back button
+
+    backButtonNormal = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(13, topCapHeight:0)
+    backButtonSelected = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(13, topCapHeight:0)
+    backgroundBody = UIImage.imageNamed('body/background_body.png')
+
     # Set the window background color
 
     view.backgroundColor = UIColor.whiteColor 
-
-    # Create the state images for the back button
-
-    backButtonNormal = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(17, topCapHeight:0)
-    backButtonSelected = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(17, topCapHeight:0)
+    view.backgroundColor = UIColor.alloc.initWithPatternImage(backgroundBody)
 
     # Style and adjust the back button
 
