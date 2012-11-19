@@ -5,12 +5,15 @@ class AppDelegate
 
     application.setStatusBarStyle(UIStatusBarStyleBlackOpaque, animated:false)
 
-    # Create the main view controllers and style the tabs
+    # Set default values
 
     titleOffset = UIOffset.new(0, -4)
+    defaultFont = UIFont.fontWithName('Futura-Medium', size:17)
 
     tabNormal = UIImage.imageNamed('body/icon_gear.png')
     tabSelected = UIImage.imageNamed('body/icon_gear.png')
+
+    # Create the main view controllers
 
     firstViewController = FirstController.alloc.initWithNibName(nil, bundle: nil)
     firstViewController.tabBarItem = UITabBarItem.alloc.initWithTitle('First', image: nil, tag: 0)
@@ -28,22 +31,18 @@ class AppDelegate
 
     firstNavController = UINavigationController.alloc.initWithRootViewController(firstViewController)
     firstNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
-    firstNavController.navigationBar.setTitleTextAttributes({
-      UITextAttributeFont => UIFont.fontWithName('Futura-Medium', size:17),
-      UITextAttributeTextShadowColor => UIColor.colorWithWhite(0.0, alpha:0.4)
-    })
+    firstNavController.navigationBar.setTitleTextAttributes({UITextAttributeFont => defaultFont})
 
     secondNavController = UINavigationController.alloc.initWithRootViewController(secondViewController)
     secondNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
-    secondNavController.navigationBar.setTitleTextAttributes({
-      UITextAttributeFont => UIFont.fontWithName('Futura-Medium', size:17),
-      UITextAttributeTextShadowColor => UIColor.colorWithWhite(0.0, alpha:0.4)
-    })
+    secondNavController.navigationBar.setTitleTextAttributes({UITextAttributeFont => defaultFont})
+
     # Style the tabBarController
 
     tabBarController = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
     tabBarController.tabBar.backgroundImage = UIImage.imageNamed('tabbar/background_tabbar.png')
     tabBarController.tabBar.selectionIndicatorImage = UIImage.imageNamed('tabbar-background-pressed.png')
+    tabBarController.tabBarItem.setTitleTextAttributes({UITextAttributeFont => defaultFont}, forState:UIControlStateNormal)
 
     # Add the tabs to the tabBarController
 
