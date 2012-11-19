@@ -15,9 +15,9 @@ class SecondController < UIViewController
 
     self.title = "Second"
 
-    # Create the state images for the back button and set the font
+    # Create the state images for the back button and set the default font
 
-    font = UIFont.fontWithName('Futura-Medium', size:13)
+    defaultFont = UIFont.fontWithName('Futura-Medium', size:13)
     backButtonNormal = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(13, topCapHeight:0)
     backButtonSelected = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(13, topCapHeight:0)
     backgroundBody = UIImage.imageNamed('body/background_body.png')
@@ -34,6 +34,6 @@ class SecondController < UIViewController
     UIBarButtonItem.appearance.setBackButtonBackgroundImage(backButtonNormal, forState:UIControlStateNormal, barMetrics:UIBarMetricsDefault)
     UIBarButtonItem.appearance.setBackButtonBackgroundImage(backButtonSelected, forState: UIControlStateHighlighted, barMetrics: UIBarMetricsDefault)
     UIBarButtonItem.appearance.setBackButtonTitlePositionAdjustment(titleOffset, forBarMetrics:UIBarMetricsDefault)
-    UIBarButtonItem.appearance.setTitleTextAttributes({UITextAttributeFont => font}, forState:UIControlStateNormal)
+    UIBarButtonItem.appearance.setTitleTextAttributes({UITextAttributeFont => defaultFont}, forState:UIControlStateNormal)
   end
 end
