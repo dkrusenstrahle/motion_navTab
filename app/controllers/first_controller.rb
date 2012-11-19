@@ -47,7 +47,7 @@ class FirstController < UIViewController
 
     # Create the controller and push it onto the stack
 
-    controller = FirstController.alloc.init
+    controller = SecondController.alloc.init
     self.navigationController.pushViewController(controller, animated:true)
   end
 end

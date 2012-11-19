@@ -43,7 +43,7 @@ class AppDelegate
 
     tabBarController = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
     tabBarController.tabBar.backgroundImage = UIImage.imageNamed('tabbar/background_tabbar.png')
-    tabBarController.tabBar.selectionIndicatorImage = UIImage.imageNamed('tabbar-background-pressed.png')
+    tabBarController.tabBar.selectionIndicatorImage = UIImage.imageNamed('tabbar/tab_selected.png')
     tabBarController.tabBarItem.setTitleTextAttributes({UITextAttributeFont => defaultFont}, forState:UIControlStateNormal)
 
     # Add the tabs to the tabBarController
