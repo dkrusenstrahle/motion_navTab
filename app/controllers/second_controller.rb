@@ -18,9 +18,9 @@ class SecondController < UIViewController
     # Create the state images for the back button and set the default font
 
     defaultFont = UIFont.fontWithName('Futura-Medium', size:13)
-    
+
     backButtonNormal = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(13, topCapHeight:0)
-    backButtonSelected = UIImage.imageNamed('navbar/button_back.png').stretchableImageWithLeftCapWidth(13, topCapHeight:0)
+    backButtonSelected = UIImage.imageNamed('navbar/button_back_selected.png').stretchableImageWithLeftCapWidth(13, topCapHeight:0)
     backgroundBody = UIImage.imageNamed('body/background_body.png')
 
     # Set the window background color

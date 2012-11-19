@@ -10,10 +10,14 @@ class AppDelegate
     titleOffset = UIOffset.new(0, -4)
     defaultFont = UIFont.fontWithName('Futura-Medium', size:17)
 
+    # Create the images
+
+    backgroundImage = UIImage.imageNamed('navbar/background_navbar.png') 
+
     tabNormal = UIImage.imageNamed('body/icon_gear.png')
     tabSelected = UIImage.imageNamed('body/icon_gear.png')
 
-    # Create the main view controllers
+    # Create and adjust the main view controllers
 
     firstViewController = FirstController.alloc.initWithNibName(nil, bundle: nil)
     firstViewController.tabBarItem = UITabBarItem.alloc.initWithTitle('First', image: nil, tag: 0)
@@ -25,9 +29,7 @@ class AppDelegate
     secondViewController.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)
     secondViewController.tabBarItem.setTitlePositionAdjustment(titleOffset)
 
-    # Create the navigation controllers and set a background image to them
-
-    backgroundImage = UIImage.imageNamed('navbar/background_navbar.png') 
+    # Create the navigation controllers and assign background patterns and fonts to them
 
     firstNavController = UINavigationController.alloc.initWithRootViewController(firstViewController)
     firstNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
@@ -37,7 +39,7 @@ class AppDelegate
     secondNavController.navigationBar.setBackgroundImage(backgroundImage, forBarMetrics:UIBarMetricsDefault)
     secondNavController.navigationBar.setTitleTextAttributes({UITextAttributeFont => defaultFont})
 
-    # Style the tabBarController
+    # Create a style the tabBarController
 
     tabBarController = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
     tabBarController.tabBar.backgroundImage = UIImage.imageNamed('tabbar/background_tabbar.png')
